@@ -1,13 +1,4 @@
 <?php
-/**
- * rating - Rating: an example LTI tool provider
- *
- * @author  Stephen P Vickers <svickers@imsglobal.org>
- * @copyright  IMS Global Learning Consortium Inc
- * @date  2016
- * @version 2.0.0
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, Version 3.0
- */
 
 /*
  * This page displays a UI for registering the tool with a tool consumer.
@@ -17,7 +8,7 @@
   use IMSGlobal\LTI\ToolProvider\DataConnector;
   use IMSGlobal\LTI\Profile;
 
-  require_once('rating_tp.php');
+  require_once('nota_tp.php');
 
 
 // Initialise session and database
@@ -36,7 +27,7 @@
         $sep = '&';
       }
       $data_connector = DataConnector\DataConnector::getDataConnector(DB_TABLENAME_PREFIX, $db);
-      $tool = new RatingToolProvider($data_connector);
+      $tool = new NotaToolProvider($data_connector);
       $tool->consumer = ToolProvider\ToolConsumer::fromRecordId($_SESSION['consumer_pk'], $data_connector);
       $do = $_POST['do'];
       if ($do == 'Register') {
@@ -91,11 +82,10 @@ EOD;
 <meta http-equiv="content-language" content="EN" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>{$title}</title>
-<link href="css/rating.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<h1>Rating Application Registration</h1>
+<h1>Nota Application Registration</h1>
 {$page}
 </body>
 </html>

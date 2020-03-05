@@ -1,24 +1,4 @@
 <?php
-/**
- * rating - Rating: an example LTI tool provider
- *
- * @author  Stephen P Vickers <svickers@imsglobal.org>
- * @copyright  IMS Global Learning Consortium Inc
- * @date  2016
- * @version 2.0.0
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, Version 3.0
- */
-
-/*
- * This page manages the definition of tool consumer records.  A tool consumer record is required to
- * enable each VLE to securely connect to this application.
- *
- * *** IMPORTANT ***
- * Access to this page should be restricted to prevent unauthorised access to the configuration of tool
- * consumers (for example, using an entry in an Apache .htaccess file); access to all other pages is
- * authorised by LTI.
- * ***           ***
-*/
 
   use IMSGlobal\LTI\ToolProvider;
   use IMSGlobal\LTI\ToolProvider\DataConnector;
@@ -124,7 +104,7 @@
 <meta http-equiv="content-language" content="EN" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>{$title}</title>
-<link href="../css/rating.css" media="screen" rel="stylesheet" type="text/css" />
+
 <script type="text/javascript">
 //<![CDATA[
 var numSelected = 0;
